@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto&display=swap');
+:root{
+    --link-color-rgb: rgb(135, 124, 255);
+    --link-color-hover-rgb: rgb(210, 206, 255);
+    --side-text-color-rgb: rgb(0, 255, 255);
+    --button-bg-color-rgb: rgb(80, 80, 80);
+    --button-active-bg-color-rgb: rgb(0, 255, 255);
+    --hover-shadow-color-rgba: rgba(255, 255, 255, 0.686);
+    --card-bg-color-rgba: rgba(46, 46, 46, 0.5);
+}
+
+/* CSS RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-image:url('https://biniam-lab.github.io/images/body-bg.jpg');
+    background-repeat:repeat-y;
+    background-size: cover;
+    font-family: Agbalumo, system-ui;
+    height: 100vh;
+}
+
+/* NAVBAR */
+.nav-link{
+    color: var(--link-color-rgb);
+    transition: all ease-in-out;
+    border-radius: 20px;
+}
+
+.nav-link:hover{
+    color: var(--link-color-hover-rgb);
+    transform: translateY(5px);
+    cursor: pointer;
+}
+
+.active{
+    background-color: var(--button-bg-color-rgb) !important;
+    color: var(--link-color-rgb) !important;
+}
+
+.icon{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 1.5rem;
+}
+
+.icon:hover{
+    box-shadow: 0px 0px 6px 6px var(--hover-shadow-color-rgba);
+}
+
+.navbar-toggler{
+    color: var(--link-color-rgb);
+    cursor: pointer;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    color: var(--link-color-rgb);
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+/* SIDE */
+.side-content .card {
+    height: 100%;
+    color: var(--side-text-color-rgb);
+    background-color: transparent;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+.btn{
+    width: 75%;
+    border: none;
+    background-color:var(--button-bg-color-rgb);
+    color: var(--link-color-rgb);
+    border-radius: 20px;
+    transition: transform ease-in-out;
+}
+
+.btn:hover{
+    background-color:var(--button-bg-color-rgb);
+    color: var(--link-color-rgb);
+    transform: scale(1.1);
+    box-shadow: 0px 0px 2px 2px var(--hover-shadow-color-rgba);
+}
+
+.btn:active{
+    background-color: var(--button-active-bg-color-rgb);
+    color: var(--link-color-rgb);
+}
+
+/* MAIN CONTAINER */
+.main-container-content{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: justify;  
+    color: rgb(160, 160, 160);
+    height: 100%;
+    padding: 1rem 1.5rem;
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+[class^="bi-"]::before, [class*=" bi-"]::before {
+    vertical-align:middle;
+}
+
+/* ABOUT ME */
+#about-me-section{
+    flex-direction: column;
+}
+
+#about-me-section a{
+    text-decoration: none;
+    color: var(--link-color-rgb);
+}
+
+/* CERTIFICATION */
+#certification-section{
+    flex-direction: column;
+    gap: 40px;
+    
+}
+
+.certificate{
+    padding: 0.75rem;
+    background-color: var(--card-bg-color-rgba);
+    border-radius: 10px;
+}
+
+/* PROJECT AND EXPERIENCE */
+#projects-and-experience-section{
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project{
+    width: 500px;
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg-color-rgba);
+    border-radius: 10px;
+}
+
+.project a{
+    margin-top: auto;
+}
+
+.project-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* CONTACT INFO */
+#contact-info-section{
+    justify-content: center;
+}
+.contact-info-page{
+    width: 500px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--card-bg-color-rgba);
+    border-radius: 10px;
+}
+
+.contact-info-page a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-info-page a:hover{
+    color: var(--link-color-hover-rgb);
+}
+
+@media screen and (max-width: 992px){
+
+    .side-content .card {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+    .card-img-top{
+        margin: auto;
+    }
+
+    .side-content .card-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
