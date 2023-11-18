@@ -57,6 +57,7 @@ switch (id) {
 } */
 const mainContainerContents = document.querySelectorAll('.main-container-content');
 const navLinks = document.querySelectorAll(".nav-link");
+const button = document.getElementById("navbarTogglerButton");
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -82,7 +83,7 @@ function showHideContent(event) {
     mainContainerContents.forEach((mainContainerContent) => {
         if (mainContainerContent.id == event.target.dataset.target) {
             mainContainerContent.style.display = 'flex';
-            document.getElementById('navbarTogglerButton').click();
+            button.click();
         }
         else {
             mainContainerContent.style.display = 'none';
