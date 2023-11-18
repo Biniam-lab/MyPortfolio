@@ -82,6 +82,7 @@ function showHideContent(event) {
     mainContainerContents.forEach((mainContainerContent) => {
         if (mainContainerContent.id == event.target.dataset.target) {
             mainContainerContent.style.display = 'flex';
+            document.getElementById('navbarTogglerButton').click();
         }
         else {
             mainContainerContent.style.display = 'none';
