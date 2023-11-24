@@ -165,7 +165,7 @@ body{
 }
 .contact-info-page{
     width: 500px;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
