@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
         navLink.addEventListener('click', (event) => {
             showHideContent(event);
             activeNavLink(event);
+            if (window.innerWidth < 992)
+                document.getElementById('navbarTogglerButton').click();
         });
     });
 
